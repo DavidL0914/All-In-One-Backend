@@ -11,7 +11,7 @@ quote_api = Blueprint('quote_api', __name__,
 
 api = Api(quote_api)
 
-CORS(quote_api, resources={r"/api/quotes/create*": {"origins": "https://davidl0914.github.io/frontend/quotes"}})
+CORS(quote_api, resources={r"/api/quotes*": {"origins": "https://davidl0914.github.io/frontend/quotes"}})
 
 class QuotesAPI:
     # Not implemented
