@@ -11,7 +11,7 @@ quote_api = Blueprint('quote_api', __name__,
 
 api = Api(quote_api)
 
-CORS(quote_api, resources={r"/api/*": {"origins": "http://127.0.0.1:4100/Nighthawk-Pages/quote"}})
+CORS(quote_api, resources={r"/api/*": {"origins": "http://127.0.0.1:4100/Nighthawk-Pages/quotes"}})
 
 class QuotesAPI:
     # Not implemented
