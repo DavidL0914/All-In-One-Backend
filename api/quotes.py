@@ -74,7 +74,7 @@ api.add_resource(QuotesAPI._UpdateDislike, '/dislike/<int:id>')
 
 if __name__ == "__main__":
     # Define the server URL
-    server = 'http://allinonebackend.stu.nighthawkcodingsociety.com/'  # Change to your server URL
+    server = 'http://allinonebackend.stu.nighthawkcodingsociety.com'  # Change to your server URL
     url = server + "/api/quotes"
     responses = []
 
