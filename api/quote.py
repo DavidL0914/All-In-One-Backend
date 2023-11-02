@@ -1,6 +1,5 @@
 from flask import Blueprint, jsonify
 from flask_restful import Api, Resource
-from flask_cors import CORS
 import requests
 import random
 
@@ -10,8 +9,6 @@ quote_api = Blueprint('quote_api', __name__,
                    url_prefix='/api/quotes')
 
 api = Api(quote_api)
-
-CORS(quote_api, resources={r"/api/quotes/create*": {"origins": "http://127.0.0.1:4100/Nighthawk-Pages/quotes"}})
 
 class QuotesAPI:
     # Not implemented
@@ -77,7 +74,7 @@ api.add_resource(QuotesAPI._UpdateDislike, '/dislike/<int:id>')
 
 if __name__ == "__main__":
     # Define the server URL
-    server = 'http://allinonebackend.stu.nighthawkcodingsociety.com'  # Change to your server URL
+    server = 'https://your-server-url.com'  # Change to your server URL
     url = server + "/api/quotes"
     responses = []
 
