@@ -1,6 +1,5 @@
 from flask import Blueprint, jsonify
 from flask_restful import Api, Resource
-from flask_cors import CORS
 import requests
 import random
 
@@ -10,9 +9,6 @@ quote_api = Blueprint('quote_api', __name__,
                    url_prefix='/api/quotes')
 
 api = Api(quote_api)
-
-CORS(quote_api, resources={r"/api/*": {"origins": "https://davidl0914.github.io/frontend/quotes"}})
-
 
 class QuotesAPI:
     # Not implemented
